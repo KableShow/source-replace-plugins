@@ -1,5 +1,5 @@
 {
-  "name": "sourcereplaceplugin",
+  "name": "source-replace-plugin",
   "version": "0.0.1",
   "description": "文件代码替换webpack插件",
   "main": "./dist/index.min.js",
