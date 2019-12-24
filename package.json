@@ -2,10 +2,16 @@
   "name": "sourcereplaceplugin",
   "version": "0.0.1",
   "description": "文件代码替换webpack插件",
-  "main": "index.js",
+  "main": "./dist/index.min.js",
   "scripts": {
+    "build": "webpack --config ./webpack.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "kable",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
 }
