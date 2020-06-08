@@ -17,8 +17,10 @@ class SourceReplace {
     if (options.replaceMode === 'js') {
       options.templateReg = /\@\{\{\{([^\}]+)\}\}\}/gi
       options.replaceFunc = function (bundleFileCode, targetStr) {
-        let code = ''
-        code = bundleFileCode.replace(/\\/gi, '\\\\')
+        let code = bundleFileCode
+        // 去除多行注释
+        code = code.replace(/(?:^|\n|\r)\s*\/\*[\s\S]*?\*\/\s*(?:\r|\n|$)/mg, '')
+        code = code.replace(/\\/gi, '\\\\')
         code = code.replace(/"/gi, '\\"')
         return code
       }
